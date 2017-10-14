@@ -53,6 +53,32 @@ To monitor the log:
 
     ./tail.sh
 
+### How to config multiuser with mudb.json
+
+Execute initcfg.sh, which create three configuration files from their templates.
+
+    bash initcfg.sh
+
+Edit userapiconfig.py, change the API\_INTERFACE to "mudbjson".
+
+Then, edit `mudb.json`.
+
+```json
+[
+    {
+        "d": 5430412010,
+        "enable": 1,
+        "method": "none",
+        "obfs": "plain",
+        "passwd": "password",
+        "port": 443,
+        "protocol": "auth_chain_a",
+        "transfer_enable": 9007099204740991,
+        "u": 268838000,
+        "user": "user"
+    }
+]
+```
 
 Client
 ------
